@@ -24,15 +24,18 @@ include('config.php');
 
 $id = $_GET['for'];
 $name =  $_GET['name'];
+    
+$check_url = str_replace('[id]',$id, $check_url);
+
 echo '<h2 class="report__person"><span class="report__id">'.$id.'</span><span class="report__name">'.$name.'</span></h2>';
     
-echo '<p><a class="report__link" href="'.$check_url.'/'.$id.'">Visit this website</a></p>';
+echo '<p><a class="report__link" href="'.$check_url.'">Visit this website</a></p>';
 
     
 foreach($pages as $p){
 
 echo '<section class="report__section">';
-$current_check = $check_url.$id.'/'.$p;
+$current_check = $check_url.'/'.$p;
 echo '<h3 class="report__header">Report for '.$p.'</h3>';
 
     
@@ -77,6 +80,7 @@ foreach ($meta as $m) {
     echo '<div class="report__attribute"><h5 class="report__attribute-name">name</h5><span class="report__attribute-value">'.$m->getAttribute('name').'</span></div>';
 
     echo '<div class="report__attribute"><h5 class="report__attribute-name">content</h5><span class="report__attribute-value">'.$m->getAttribute('content').'</span></div>';
+    echo '<div class="report__attribute"><h5 class="report__attribute-name">charset</h5><span class="report__attribute-value">'.$m->getAttribute('charset').'</span></div>';
     echo '</div>';
     $i++;
 }
@@ -92,7 +96,54 @@ foreach ($img as $im) {
     echo '<div class="report__attribute"><h5 class="report__attribute-name">src</h5><span class="report__attribute-value">'.$im->getAttribute('src').'</span></div>'; // add link to this
 
     echo '<div class="report__attribute"><h5 class="report__attribute-name">alt</h5><span class="report__attribute-value">'.$im->getAttribute('alt').'</span></div>';
-    echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height</h5><span class="report__attribute-value">'.$im->getAttribute('width').' &#215; '.$im->getAttribute('height').'</span></div>';
+    
+    echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height as set in HTML</h5><span class="report__attribute-value">';
+    
+    $image_width = $im->getAttribute('width');
+    
+    if(isset($image_width)&&$image_width!==""){
+        
+        echo $im->getAttribute('width');
+        
+    }else{echo '<b>not set</b>';}
+    
+    echo ' &#215; ';
+       
+     $image_height = $im->getAttribute('height');
+    
+    if(isset($image_height)&&$image_height!==""){
+        
+        echo $im->getAttribute('height');
+        
+    }else{echo '<b>not set</b>';}
+       
+       
+     echo '</span></div>';
+    
+    $image_url = $check_url.$im->getAttribute('src');
+    
+    @$size = getimagesize($image_url);
+    
+   if(!isset($size[0])){
+       
+       echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height of actual image file</h5><span class="report__attribute-value"><strong class="report__error">Image not found/not raster image</strong></div>';
+       
+   }else{
+    
+    
+    echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height of actual image</h5><span class="report__attribute-value">'.$size[0].' &#215; '.$size[1].'</span></div>';
+       
+       if(($size[0]==$im->getAttribute('width'))&&($size[1]==$im->getAttribute('height'))){
+           
+           echo '<span class="report__ok">OK</span>';
+       }else{
+           echo '<span class="report__error">Resized or not set</span>';
+       }
+    
+        
+   }
+   
+    
     echo '</div>';
     $i++;
 }

@@ -48,7 +48,7 @@ footer {margin-top: 100px; border-top:1px solid #eee; font-size: 0.8em; padding-
 .report__attribute-name {font-size: 0.9rem; margin: 0; padding:0; text-transform: uppercase; color: #777;}
 .report__attribute-value {display: block;}
 
-.report__counter {margin: 0; width: 20px; text-align:center; background: red; border-radius: 50%; line-height: 20px; display: inline-block; color: #fff; }
+.report__counter {margin: 0; width: 20px; text-align:center; background: #333; border-radius: 50%; line-height: 20px; display: inline-block; color: #fff; }
 
 .report__validator {list-style-type: none; margin: 0 0 2em 0;padding: 0;}
 .report__error-item { padding: 5px; font-size: 14px; border-top:1px solid #ddd;}
