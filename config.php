@@ -8,7 +8,7 @@ $pages = array(
 );
     
 // include trailing slash
-// http://www.14042290.webdevmmu.uk/
+// e.g. http://www.[student id].webdevmmu.uk/
 $check_url = 'http://www.[id].webdevmmu.uk/';
     
 ?>
