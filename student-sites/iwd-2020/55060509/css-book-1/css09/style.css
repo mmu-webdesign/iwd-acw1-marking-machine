@@ -1,0 +1,73 @@
+html {
+    font-size: 10px;
+  }
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2A2C3A;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+a:link {
+    color: #214601;
+  }
+  
+  a:link {
+    color: #265301;
+  }
+  
+  a:visited {
+    color: #437A16;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #CDFEAA;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }
+
+  ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+  }
+
+  h1 + p {    
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  .uni { 
+  font-weight: 800;
+  color: #660099;
+  }
+
+  .address { 
+  font-style: italic;
+  font-family: fantasy;
+  font-size: 1.8rem;
+  color: #2A2C3A;
+  font-weight: 900;
+  }

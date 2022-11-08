@@ -1,0 +1,67 @@
+/* Add CSS to this file as requested: you can delete this comment. */
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #f1f7ed;
+  color: #161313;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+figcaption {
+  font-size: small;
+}
+
+ul.main-navigation {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.main-navigation li {
+  display: inline-block;
+  border: 1px solid #deecd5;
+  padding: 1rem;
+}
+
+a:link {
+  color: #5d1d2a;
+}
+a:visited {
+  color: #224436;
+}
+a:hover {
+  color: #7c2738;
+}
+a:active {
+  color: #3e141c;
+}
+
+figure {
+  margin-left: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  padding: 0.5rem;
+}
+td {
+  border-top: 1px solid #ccc;
+  padding: 0.5rem;
+}

@@ -1,0 +1,88 @@
+html{
+    font-size: 10px;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color:#2c2c2c;
+    font-size: 1.8rem;
+    line-height: 1.6; 
+    background-color: #f9f9f9;
+    max-width: 670px;
+    margin: 4rem auto;
+  }
+
+
+h1,h2 {
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    color: #2A2C3A;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  .page-footer {
+      background-color: #565761;
+      color: #f9f9f9;
+}
+  
+  a:link {
+    color: #CDFEAA;
+  }
+  
+  a:visited {
+    color: #f4b960;
+    background: #faf8e3;
+  }
+  a:visited:hover {
+    background: #fdfdf8;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #437A16;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #437A16;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }
+
+figcaption {
+    font-style: italic;
+    margin: .5rem;
+    padding: .5rem;
+}
+figure {
+    float: left;
+    margin: .5rem;
+    padding-right: 2rem;
+}
+
+.menu li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+}
+
+ul{
+    padding: 0px;
+}
+
+.container {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 4px dotted rgb(79, 185, 227);
+    }

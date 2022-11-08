@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="js-number"></p>
+    <p class="js-comments"></p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var score = Math.floor(Math.random() * 100);
+
+            $('.js-number').text(score);
+
+            if (score > 0 && score <= 20) {
+                $('.js-comments').text('Well under a pass mark.');
+            }
+
+            if (score > 20 && score <= 40) {
+                $('.js-comments').text('Under a pass mark.');
+            }
+
+            if (score > 40 && score <= 50) {
+                $('.js-comments').text('Threshold - just passed.');
+            }
+
+            if (score > 50 && score <= 60) {
+                $('.js-comments').text('Good work.');
+            }
+
+
+            if (score > 60 && score <= 70) {
+                $('.js-comments').text('Very good work.');
+            }
+
+            if (score > 70 && score <= 80) {
+                $('.js-comments').text('Excellent work.');
+            }
+
+            if (score > 80 && score <= 100) {
+                $('.js-comments').text('Really excellent work. Well done.');
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

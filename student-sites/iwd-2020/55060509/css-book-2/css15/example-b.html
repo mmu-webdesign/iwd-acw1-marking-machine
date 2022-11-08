@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example B</title>
+    <style>
+    /* Basic box styling */
+    * {box-sizing: border-box;}
+    
+    .wrapper > div {
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: rgb(207,232,220);
+        padding: 1em;
+    }
+    /* Grid styling */
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 100px 200px;
+        grid-gap: 10px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+        <div class="box5">Five</div>
+        <div class="box6">Six</div>
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 12 - Background images</title>
+    <style class="editable">
+    /* basic box styles */
+    .box {
+        width: 500px;
+        height: 300px;
+        padding: .5em;
+        margin: 30px auto;
+        border: 10px solid rebeccapurple;
+        border-radius: 1em;
+        border-top-right-radius: 10% 30%; 
+      }
+    /* Background image styles */
+
+      .balloon {
+        background-image: url(img/balloons.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .star {
+        background-image: url(img/star.png); 
+        background-repeat: no-repeat; 
+        background-position: top 150px right 250px;
+      } 
+  
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="box balloon"></div>
+        <div class="box star"></div>
+    </div>
+          
+
+
+
+</body>
+</html>

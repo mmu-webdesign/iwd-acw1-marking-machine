@@ -1,0 +1,77 @@
+/* General styles */
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  ul,ol,dl,p {
+    font-size: 1.5rem;
+  }
+  
+  li, p {
+    line-height: 1.5;
+  }
+  
+  /* Description list styles */
+  
+  dd, dt {
+    line-height: 1.5;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
+
+  /* Additional styles */
+
+  ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+  }   
+
+  ul {
+    padding-left: 2rem;
+    list-style-type: none;
+  }
+
+  ul li {
+    padding-left: 2rem;
+    background-image: url(img/star.svg);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: #265301;
+  }
+  
+  a:visited {
+    color: #437A16;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #CDFEAA;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }

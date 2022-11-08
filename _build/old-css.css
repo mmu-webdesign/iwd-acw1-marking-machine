@@ -1,0 +1,250 @@
+/* readout page */
+
+.report__name {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.report__id {
+    font-weight: normal;
+    color: #777;
+    display: block;
+}
+
+.report__link {
+    display: inline-block;
+    background: #eee;
+    font-weight: bold;
+    border-radius: 0.2em;
+    padding: 10px 20px;
+}
+
+.report__section {
+    border-top: 3px solid #222;
+    padding: 10px 3px 30px 3px;
+    margin-top: 30px;
+}
+
+.report__header {
+    margin: 0;
+    padding: 0 0 1.5em 0;
+}
+
+.report__error {
+    margin: 1em 0;
+    font-weight: bold;
+    color: red;
+    padding-left: 23px;
+    background: url(../i/cross.svg) left center no-repeat;
+    background-size: 16px;
+}
+
+.report__error--inline {
+    font-weight: bold;
+    color: red;
+    padding-left: 23px;
+    background: url(../i/cross.svg) left center no-repeat;
+    background-size: 16px;
+}
+
+.report__ok {
+    margin: 1em 0;
+    font-weight: bold;
+    color: green;
+    padding-left: 23px;
+    background: url(../i/tick.svg) left center no-repeat;
+    background-size: 16px;
+}
+
+.report__block {
+    border-top: 1px solid #aaa;
+    padding: 5px 3px 30px 3px;
+    vertical-align: top;
+}
+
+
+/*.report__block:nth-child(2n) {margin-left: 2%;}*/
+
+.report__sub-block {
+    width: 23%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2%;
+    padding-bottom: 20px;
+}
+
+.report__block-title {
+    margin: 0;
+    padding: 0 0 1em 0;
+    font-weight: bold;
+}
+
+.report__attribute {
+    padding: 7px 0;
+}
+
+.report__attribute+.report__attribute {
+    border-top: 1px solid #ddd;
+}
+
+.report__attribute-name {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.report__attribute-value {
+    display: block;
+}
+
+.report__counter {
+    margin: 0;
+    width: 20px;
+    text-align: center;
+    background: #ddd;
+    border-radius: 50%;
+    line-height: 20px;
+    display: inline-block;
+    color: #222;
+}
+
+.report__validator {
+    list-style-type: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+.report__error-item {
+    padding: 5px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+.report__error-type-error {
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
+
+.report__error-type-info {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
+
+.report__attribute-value.attr-small {
+    font-size: 15px;
+    line-height: 1.1;
+}
+
+.report__section textarea {
+    max-width: 100% !important;
+    padding: 20px;
+    border-radius: 0.5em;
+    border: 0;
+    background: #222;
+    color: #eee;
+    font-size: 18px;
+    font-family: consolas, 'andale mono', monospace;
+}
+
+.report__raw--inline {
+    width: 100%;
+}
+
+.report__end {
+    margin-top: 4em;
+    border-top: 3px solid #111;
+    padding-top: 10px;
+}
+
+.colors {
+    margin: 1em 0;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* data tables */
+
+.data__table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.data__table tr td {
+    border-top: 1px solid #ddd;
+}
+
+.data__table tr+tr td {
+    border-top: 1px solid #eee;
+}
+
+.data__table td {
+    vertical-align: top;
+    padding: 10px 5px 12px 5px;
+}
+
+.data__area {
+    width: 20%;
+}
+
+.data__page {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.data__subhead {
+    font-weight: bold;
+    color: #999;
+    width: 15%;
+}
+
+.data__result {
+    width: 65%;
+}
+
+.monospace {
+    font-family: consolas, 'andale mono', monospace;
+    font-size: .95em;
+}
+
+.simple {}
+
+.simple__header {
+    margin: 1em 0 0 0;
+    padding: 0.3em 0 1em 0;
+    border-top: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.simple textarea {
+    width: 100%;
+}
+
+.data__table .report__sub-block {
+    width: 48%;
+}
+
+.hyperlinks .report__sub-block {
+    width: 18%;
+}
+
+.hyperlinks h4 {
+    border-top: 1px solid #ddd;
+    margin: 0;
+    padding: 10px 0 15px 0;
+}

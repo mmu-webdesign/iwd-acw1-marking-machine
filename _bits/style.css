@@ -1,0 +1,47 @@
+/* DO NOT DELETE THIS LINE */
+
+@import url(http://55060509.webdevmmu.uk/test/style.css);
+
+/* BEGIN EDITING HERE */
+
+
+/* begin by commenting out this CSS rule - it's here as a visual check that you have correctly linked together your CSS file and your HTML files. */
+
+* {
+    border: 1px solid red;
+}
+
+
+/* now you need to use your style guide to rewrite some of these CSS rules. */
+
+
+/* add at least two web-safe fonts and a generic font family fallback for all the text on your site */
+
+body {
+    font-family: not-found;
+}
+
+
+/* now override this for your headings - use a contrasting web-safe font and generic font family fallback. */
+
+h1,
+h2 {
+    font-family: not-found;
+}
+
+
+/* now change the colour of the navigation bar so there is a good colour contrast between the bar and the white links within it */
+
+.main-nav ul {
+    background-color: #eeeeee;
+}
+
+
+/* and add a 'hover state' for the main nav links. This should be a subtle tint of your navigation bar colour */
+
+.main-nav ul a:hover {
+    color: #eeeeee;
+}
+
+
+/* now add two classes as requested */

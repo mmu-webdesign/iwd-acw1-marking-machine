@@ -2,6 +2,43 @@
 
 include('config.php');
 
+function formatBytes($bytes, $precision = 2) { 
+    $units = array('b', 'kb', 'mb', 'gb', 'tb'); 
+
+    $bytes = max($bytes, 0); 
+    $pow = floor(($bytes ? log($bytes) : 0) / log(1024)); 
+    $pow = min($pow, count($units) - 1); 
+
+    // Uncomment one of the following alternatives
+     $bytes /= pow(1024, $pow);
+    // $bytes /= (1 << (10 * $pow)); 
+
+    return round($bytes, $precision) . ' ' . $units[$pow]; 
+} 
+
+function getElementByClass(&$parentNode, $tagName, $className, $offset = 0) {
+    $response = false;
+
+    $childNodeList = $parentNode->getElementsByTagName($tagName);
+    $tagCount = 0;
+    for ($i = 0; $i < $childNodeList->length; $i++) {
+        $temp = $childNodeList->item($i);
+        if (stripos($temp->getAttribute('class'), $className) !== false) {
+            if ($tagCount == $offset) {
+                $response = $temp;
+                break;
+            }
+
+            $tagCount++;
+        }
+
+    }
+
+    return $response;
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +68,23 @@ echo '<h2 class="report__person"><span class="report__id">'.$id.'</span><span cl
     
 echo '<p><a class="report__link" href="'.$check_url.'">Visit this website</a></p>';
 
+    // colours are not right yet
+    
+echo '<div class="colors"><h3>Colours set in stylesheet (best to check as this does not catch all of them)</h3>';
+    
+    $css = file_get_contents($check_url.'style.css');
+    
+    $pattern = "/color:\s*(#[0-9a-f]+);/";
+    
+    preg_match_all($pattern, $css, $matches, PREG_PATTERN_ORDER);
+
+  foreach($matches[1] as $m){
+      
+      echo '<div class="color-box" style="background-color:'.$m.'"></div>';
+      
+  }
+    
+    echo '</div>';
     
 foreach($pages as $p){
 
@@ -65,6 +119,8 @@ if(strstr($header, '404 Not Found')){
     
     
 $page = file_get_contents($current_check);
+    
+ 
 
 $dom = new DOMDocument;
 @$dom->loadHTML($page);
@@ -123,6 +179,8 @@ foreach ($img as $im) {
     $image_url = $check_url.$im->getAttribute('src');
     
     @$size = getimagesize($image_url);
+ 
+
     
    if(!isset($size[0])){
        
@@ -130,8 +188,14 @@ foreach ($img as $im) {
        
    }else{
     
+           
+$headers  = get_headers($image_url, 1);
+
+$this_filesize    = $headers['Content-Length'];
+       
     
-    echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height of actual image</h5><span class="report__attribute-value">'.$size[0].' &#215; '.$size[1].'</span></div>';
+    echo '<div class="report__attribute"><h5 class="report__attribute-name">width and height of actual image</h5><span class="report__attribute-value">'.$size[0].' &#215; '.$size[1].' &middot; '.formatBytes($this_filesize).'</span>
+    </div>';
        
        if(($size[0]==$im->getAttribute('width'))&&($size[1]==$im->getAttribute('height'))){
            
@@ -225,14 +289,49 @@ $i++;
 echo '</div>';
  
     
-// possibly detecting BR tags
-// going off and fetching the actual image size of the images
-// comment text
-// add counters
-// blank areas?
-// cross for validation
+    if($p=="index.html"){
+    echo '<div class="report__block"><h4 class="report__block-title">Class1 and Class2 usage</h4>';
+
+    echo '<div class="report__sub-block">';
     
 
+
+    $innerHTML = '';
+$classname = 'class1';
+$finder = new DomXPath($dom);
+$nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+$tmp_dom = new DOMDocument(); 
+foreach ($nodes as $node) 
+    {
+    $tmp_dom->appendChild($tmp_dom->importNode($node,true));
+    }
+$innerHTML.=trim($tmp_dom->saveHTML()); 
+    if($innerHTML!==""){
+        
+        $innerHTML = str_replace('<', '&lt;', $innerHTML);
+        echo '<pre>'.$innerHTML.'</pre>';
+    
+    } else {echo '<p><strong>Class1</strong> not found</p>';}
+    
+        $innerHTML = '';
+$classname = 'class2';
+$finder = new DomXPath($dom);
+$nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+$tmp_dom = new DOMDocument(); 
+foreach ($nodes as $node) 
+    {
+    $tmp_dom->appendChild($tmp_dom->importNode($node,true));
+    }
+$innerHTML.=trim($tmp_dom->saveHTML()); 
+    
+    if($innerHTML!==""){echo '<pre>'.$innerHTML.'</pre>'; } else {echo '<p><strong>Class2</strong> not found</p>';}
+    
+    
+    echo '</div>';
+    
+    }
+//style.css
+    
 ?>
 
 <!-- 

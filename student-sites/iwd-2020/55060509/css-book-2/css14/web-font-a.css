@@ -1,0 +1,79 @@
+/* Place your Font Squirrel generated @font-face CSS here */
+@font-face {
+  font-family: 'ralewayblack';
+  src: url('fonts/raleway-black-webfont.woff2') format('woff2'),
+       url('fonts/raleway-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+       url('fonts/raleway-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url('fonts/raleway-bold-webfont.woff2') format('woff2'),
+       url('fonts/raleway-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ralewayitalic';
+  src: url('fonts/raleway-italic-webfont.woff2') format('woff2'),
+       url('fonts/raleway-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+/* General setup */
+
+html {
+    font-size: 10px;
+    margin: 0;
+  }
+  
+  body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    color: #004040;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+  }
+  
+  h1,h2 {
+    letter-spacing: 0.2rem;
+    font-family: 'ralewayblack', sans-serif;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'ralewayregular', sans-serif;
+  }
+
+  em {
+    font-family: 'ralewayitalic', sans-serif;
+  }
+
+ strong {
+    font-family: 'ralewaybold', sans-serif;
+  }

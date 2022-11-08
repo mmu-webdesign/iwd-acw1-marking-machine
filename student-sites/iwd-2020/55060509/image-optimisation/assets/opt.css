@@ -1,0 +1,233 @@
+html {
+  font-family: "Libre Franklin", Verdana, Arial, Helvetica, "Droid sans",
+    sans-serif;
+  font-size: 110%;
+  /* flexible baseline */
+  /* 
+    * rem is set relative to the font size of the root element, the html, instead of
+    * the body, and this is where the r in rem comes from, as rem stands for “root em“.
+    * The default browser font size is 16px.
+    */
+  line-height: 1.4;
+  background-color: #eee;
+  color: #222;
+}
+
+body {
+  padding: 5em 0;
+}
+/* Typography */
+
+h1 {
+}
+
+h1 em {
+  color: #777;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  margin-top: 45px;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 1em 0;
+}
+
+a {
+  color: #222;
+  text-decoration-color: #3f7696;
+}
+
+a:hover {
+  color: #3f7696;
+  text-decoration-color: #3f7696;
+}
+
+.instruct {
+  font-weight: bold;
+  color: #800517;
+}
+/* Containers */
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.work {
+  background-color: #fff;
+  padding: 1em;
+}
+/* Media */
+
+img {
+  max-width: 100%;
+  height: auto;
+  /*  margin: 0 auto;               Centring an image. */
+}
+
+.tn {
+  float: right;
+  padding: 10px;
+}
+
+.tn_last {
+  float: right;
+  padding: 10px;
+  clear: both;
+}
+
+figure.to-add {
+  margin: 0 0 5em 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+
+figure b {
+  display: block;
+  color: #666;
+}
+
+figure img {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+figure i {
+  display: block;
+  margin: 0.75em 0;
+  background: white;
+  padding: 1em;
+  font-style: normal;
+}
+
+.action {
+  font-weight: bold;
+}
+
+img.to-add {
+  /* background: #800517 url(error.png) 20% center no-repeat; */
+  background: #800517;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  color: #fff;
+}
+
+img.to-add:before {
+  padding: 1rem 1rem 0 1rem;
+  display: block;
+  color: white;
+
+  /* this content is replaced by the alt text as far as I can work out 
+  content: "This image is missing! You need to create an image called "; */
+}
+
+img.to-add:after {
+  content: "Add an image called: " attr(src);
+  font-weight: bold;
+  display: block;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.fbc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+}
+
+.fbc .centered-container {
+}
+
+.fbc .centered-container h1 {
+  margin: 0;
+}
+
+.fbc .centered-container ul {
+  list-style-type: none;
+  margin: 2em 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+
+.fbc .centered-container li a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.fbc a {
+  text-decoration: none;
+  color: #333;
+}
+
+.fbc li a:hover {
+  background: white;
+}
+
+.fbc .centered-container li a span {
+  display: block;
+  font-weight: bold;
+  color: #3f7696;
+}
+
+.fbc footer a:hover {
+  text-decoration: underline;
+}
+
+a.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0.2em;
+  background-color: white;
+  color: #3f7696;
+  text-decoration: none;
+  margin-top: 3em;
+  transition: color 0.2s ease;
+}
+
+a.back-button:hover {
+  color: #333;
+}
+
+img.tn {
+  background: white;
+  box-shadow: none;
+  border: 1px solid #eee;
+  padding: 5px;
+  margin: 0 0 10px 10px;
+}
+
+img.tn-clear {
+  clear: both;
+}
+
+footer {
+  font-size: 71%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+figure a {
+  color: #3f7696;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+figure a:hover {
+  text-decoration: underline;
+}
+
+img.inline {
+  display: inline;
+  margin: 0;
+  padding: 0 5px;
+  background: transparent;
+  box-shadow: none;
+}

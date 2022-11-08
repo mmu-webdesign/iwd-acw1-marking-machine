@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 15b</title>
+    <style>
+    /* Basic box styling */
+    * {box-sizing: border-box;}
+    
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 2rem;
+    }
+    .wrapper > div {
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: rgb(241, 244, 243);
+        padding: 1em;
+    }
+    /* Insert Grid stylings */
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100% 100%;
+        grid-gap: 10px;
+    }
+    .box1 {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    }
+    .box2 {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+    .box3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    </style>
+</head>
+<body>
+    <h1>Basic Grid</h1>
+
+    <div class="wrapper">
+
+        <div class="box1">    
+            
+            <h2>Box One</h2>
+            <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+        </div>
+
+        <div class="box2">    
+            
+            <h2>Box Two</h2>
+            <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+        </div>
+        
+        <div class="box3">    
+            
+            <h2>Box Three</h2>
+            <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

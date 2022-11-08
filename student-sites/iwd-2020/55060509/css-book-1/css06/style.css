@@ -1,0 +1,23 @@
+html {
+    font-size: 10px;
+  }
+  
+h1 {
+    font-size: 5rem;
+    color: #800000;
+    font-family: Arial, Helvetica, sans-serif; 
+    text-transform: capitalize;    
+}
+
+p {
+    font-size:1.8rem;
+    color: #2F4F4F;
+    font-family: georgia, times, serif;
+    line-height: 1.6; 
+}
+
+h1 + p {    
+    font-weight: bold;
+    letter-spacing:4px; 
+    word-spacing:4px;
+  }

@@ -1,0 +1,61 @@
+html {
+    font-family: Verdana, Arial, Helvetica, "Droid sans", sans-serif;
+    font-size: 100%;  /* flexible baseline */
+    /* 
+    * rem is set relative to the font size of the root element, the html, instead of
+    * the body, and this is where the r in rem comes from, as rem stands for “root em“.
+    * The default browser font size is 16px.
+    */
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Typography */
+h1 {
+    font-size: 34px;
+    letter-spacing: 0.05em;
+
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 45px;
+}
+
+.instruct
+{
+    font-size: 110%;
+    font-weight: bold;
+    color: #800517;
+}
+
+/* Containers */
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90%;
+}
+
+.work {
+    background-color: #FFFFC2;
+    padding: 10px;
+}
+
+/* Media */
+
+img {
+    max-width: 100%;
+    height: auto;
+/*  margin: 0 auto;               Centring an image. */
+}
+
+.tn {
+    float:right;
+    padding: 10px;
+}
+.tn_last {
+    float:right;
+    padding: 10px;
+    clear:both;
+}

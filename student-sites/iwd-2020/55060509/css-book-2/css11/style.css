@@ -1,0 +1,26 @@
+html{
+    font-size: 10px; /* 1 rem is now 10px for easy maths */
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.4 ;
+    color: #333; 
+    background-color: #f2f5f5; 
+}
+p {
+    font-size: 2.4rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    border:  2px dotted #878f8f;
+}
+
+.box {
+    background-color: #E0E6E6;
+    padding: 2rem;
+    margin: 1rem;
+    border-top: 20px solid #878f8f;
+    border-bottom: 20px solid #878f8f;
+}

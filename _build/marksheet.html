@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            color: #333;
+            margin: 3em auto;
+            line-height: 1.35;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-size: 1em;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+        }
+        
+        h2 .course {
+            display: block;
+            font-weight: normal;
+        }
+        
+        ul.information {
+            list-style-type: none;
+            margin: 1em 0;
+            padding: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 2em 0;
+        }
+        
+        table th {
+            text-align: left;
+            padding: 7px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table td {
+            border-bottom: 1px solid #eee;
+            padding: 7px;
+        }
+        
+        table .task td {
+            font-weight: bold;
+        }
+        
+        table .marker {
+            background: #333;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .noprint {
+            color: red;
+        }
+        
+        .get-result {
+            background: #ddd;
+            padding: 5px;
+            border: 0;
+            font-size: 1em;
+            max-width: 30px;
+        }
+        
+        table td+td,
+        table th+th {
+            text-align: center;
+        }
+        
+        .final-result {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        @media print {
+            .noprint {
+                display: none;
+            }
+        }
+        
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Manchester Metropolitan University</h1>
+    <h2>
+        <span class="course">464Z9000 Introduction to Web Development</span>Lab based practical test Feedback</h2>
+
+    <ul class="information">
+        <li>Date <strong>date</strong></li>
+        <li>Name <strong>name</strong></li>
+        <li>Student number <strong>number</strong></li>
+    </ul>
+
+
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Mark</th>
+            <th>Max</th>
+        </tr>
+
+        <tr class="task">
+            <td><span class="marker">A</span> Three HTML5 files</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="result">
+            <td>Correct filename for <strong>index.html</strong></td>
+            <td><span class="add-to-mark">1</span></td>
+            <td>1</td>
+        </tr>
+
+
+        <tr class="task">
+            <td><span class="marker">B</span> Metadata for all pages</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="noprint">
+            <td colspan="3">readout from code</td>
+        </tr>
+        <tr class="result">
+            <td>Title for <strong>index.html</strong></td>
+            <td><input type="text" class="get-result" /></td>
+            <td>2</td>
+        </tr>
+        <tr class="noprint">
+            <td colspan="3">readout from code</td>
+        </tr>
+        <tr class="result">
+            <td>Title for <strong>stocklist.html</strong></td>
+            <td><input type="text" class="get-result" /></td>
+            <td>2</td>
+        </tr>
+        <tr class="noprint">
+            <td colspan="3">readout from code</td>
+        </tr>
+        <tr class="result">
+            <td>Title for <strong>contact.html</strong></td>
+            <td><input type="text" class="get-result" /></td>
+            <td>2</td>
+        </tr>
+
+
+
+        <tr class="final-result">
+            <td colspan="3">TOTAL <span class="result-readout error">error</span>/100</td>
+
+        </tr>
+
+    </table>
+
+    <p><strong>Tutor&#8217;s comments</strong> Well done, this is excellent work.</p>
+    <p><strong>Marked by</strong> RE, DJW, SMcG</p>
+
+
+
+    A Three HTML5 files Correct filenames index.html ☐ stocklist.html contact.html 1 B Metadata – all pages Title - accurate syntax /spelling, relevant to each page index.html ☐ stocklist.html ☐ contact.html ☐ 6 Meta description – accurate syntax /spelling,
+    relevant to each page index.html ☐ stocklist.html ☐ contact.html ☐ 6 C Semantic mark-up – applied to supplied content for index.html Headings, sub-headings and paragraphs 6 Ordered list (as defined) 3 Un-ordered list (as defined) 3 D Place logo within
+    document with working link on all pages Inserted image including height and width size attributes index.html ☐ stocklist.html ☐ contact.html ☐ 3 Appropriate ALT description 2 Working hyperlink as required 2 E Create active external link in content
+    as instructed Working hyperlink to http://recordcollectormag.com/ 2 Relevant link text, following good practice 2 F Picture – cropping, optimizing & export/save for web as JPEG Image shop-photograph-3.jpg cropped (approximately as illustrated) 2 Image
+    re-sized (width 600px, height 400px) 2 Image optimised while keeping image quality high (file size TBCkb or below) 2 Exported in jpeg file format and saved as shopfront-window.jpg 2 Inserted image including height and width size attributes 2 Appropriate
+    ALT description 2 G Navigation system on all pages Working hyperlinks for navigation between homepage and sub-page index.html ☐ stocklist.html ☐ contact.html ☐ 6 Relevant title attribute text – following good practice index.html ☐ stocklist.html ☐
+    contact.html ☐ 3 H Attach external style sheet Attached and working on all pages index.html ☐ stocklist.html ☐ contact.html ☐ 3 I Validation – HTML 5 index.html validates 5 stocklist.html validates with logo and navigation 5 contact.html validates
+    with logo and navigation 5  J Design – Editing CSS CSS comments - Comment out the rule from the stylesheet that sets a 1px red border on all elements 1 Typography with CSS - set a ‘web safe’ font family for all of the body content. Use at least three
+    typeface names per CSS rule, ending with a generic family, e.g. ‘serif’. 2 Heading Typography with CSS - set a different but harmonious ‘web safe’ font family for h1 and h2 elements. Use at least three typeface names per CSS rule, ending with a generic
+    family, e.g. ‘serif’. 2 Styling content with CSS Classes - These rules should contain at least two declarations and produce an aesthetically pleasing effect that complements the rest of the page. Styling content with CSS Class #1 – Use #custom-class
+    in your stylesheet to write a CSS rule to style an element on the homepage. 5 Styling content with CSS Class #2 – Use #another-class in your stylesheet to write a CSS rule to style a second element on the homepage. 5 Colour – Navigation (background-color)
+    – apply a colour scheme using the background-color CSS rule to the .main-nav navigation bar. 2 Note – The initial state of the navigation bar hyperlink text will be set to white and this cannot be changed. Colour – Navigation (a:hover) – add an a:hover
+    state for the hyperlink text in your navigation. For both marks all colour choices should pass AAA for small text. 2 Note – For both marks all colour choices should pass AAA for small text. Colour - Footer – add a subtle ‘tint’ of your navigation
+    bar colour to the footer. Make sure there is still enough contrast between the foreground and background elements. 2 Choice of body link colours - apply a colour scheme for all four states of the hyperlinks of the content on the homepage. a ☐ a:visited
+    ☐ a:hover ☐ a:active ☐ 4
+
+
+</body>
+
+<!-- scan through all span.add-to-mark and input.get-result and add them to the score. Only update span.result-readout when all are full. -->
+
+<script type="text/javascript">
+    function checkmarks() {
+
+        alert('doing');
+
+
+    }
+
+    checkmarks();
+
+    // onkeyup checkmarks();
+</script>
+
+</html>
